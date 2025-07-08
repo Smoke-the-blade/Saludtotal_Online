@@ -18,8 +18,12 @@ app.use(express.json());
 //  res.json({ mensaje: 'El backend responde correctamente desde la red local' });
 // });
 
+// app.get('/*', (req, res) => {
+ // res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// });
+
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.send('Hola mundo');
 });
 
 

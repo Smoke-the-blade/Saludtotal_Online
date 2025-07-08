@@ -12,14 +12,14 @@ app.use('/api/pacientes', require('./routes/pacienteRoutes'));
 app.use('/api/doctores', require('./routes/doctorRoutes'));
 app.use('/api/turnos', require('./routes/turnoRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join('./backend/dist', 'dist')));
 
 app.get('/prueba', (req, res) => {
   res.json({ mensaje: 'El backend responde correctamente desde la red local' });
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join('./backend/dist', 'dist', 'index.html'));
 });
 
 

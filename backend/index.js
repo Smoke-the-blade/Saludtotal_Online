@@ -28,11 +28,4 @@ app.listen(PORT, '0.0.0.0',() => {
     console.log(`Servidor corriendo en ${PORT}`);
 });
 
-
-app._router.stack.forEach(r => {
-  if (r.route && r.route.path) {
-    console.log(r.route.path);
-  }
-});
-
   

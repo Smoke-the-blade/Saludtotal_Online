@@ -7,16 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/pacientes', require('./routes/pacienteRoutes'));
-app.use('/api/doctores', require('./routes/doctorRoutes'));
-app.use('/api/turnos', require('./routes/turnoRoutes'));
-app.use('/api/admin', require('./routes/adminRoutes'));
-app.use(express.static(path.join(__dirname, 'dist')));
+// app.use('/api/auth', require('./routes/authRoutes'));
+// app.use('/api/pacientes', require('./routes/pacienteRoutes'));
+// app.use('/api/doctores', require('./routes/doctorRoutes'));
+// app.use('/api/turnos', require('./routes/turnoRoutes'));
+// app.use('/api/admin', require('./routes/adminRoutes'));
+// app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/prueba', (req, res) => {
-  res.json({ mensaje: 'El backend responde correctamente desde la red local' });
-});
+// app.get('/prueba', (req, res) => {
+//  res.json({ mensaje: 'El backend responde correctamente desde la red local' });
+// });
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
